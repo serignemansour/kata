@@ -33,7 +33,30 @@ public class FooBarQix {
         return result.length() > 0 ? result.toString() : input.replace('0', '*');
 
     }
+	
+	public static void main(String[] args) {
+        // Test cases
+        System.out.println(compute("1"));    // 1
+        System.out.println(compute("2"));    // 2
+        System.out.println(compute("3"));    // FooFoo
+        System.out.println(compute("4"));    // 4
+        System.out.println(compute("5"));    // BarBar
+        System.out.println(compute("6"));    // Foo
+        System.out.println(compute("7"));    // QixQix
+        System.out.println(compute("8"));    // 8
+        System.out.println(compute("9"));    // Foo
+        System.out.println(compute("10"));   // Bar
+        System.out.println(compute("13"));   // Foo
+        System.out.println(compute("15"));   // FooBarBar
+        System.out.println(compute("21"));   // FooQix
+        System.out.println(compute("33"));   // FooFooFoo
+        System.out.println(compute("51"));   // FooBar
+        System.out.println(compute("53"));   // BarFoo
+        System.out.println(compute("101"));  // 1*1
+        System.out.println(compute("303"));  // FooFoo*Foo
+        System.out.println(compute("105"));  // FooBarQix*Bar
+        System.out.println(compute("10101"));// FooQix**
+    }
 
 	
-
 }

@@ -23,10 +23,14 @@ public class FooBarQix {
                 result.append("Bar");
             } else if (digit == '7') {
                 result.append("Qix");
-            } 
+            } else if (digit == '0') {
+                // Step 2: Replace 0 with *
+                result.append("*");
+            }
         }
 		
-		result.toString();
+		// If nothing was appended in result, return the input with * for 0
+        return result.length() > 0 ? result.toString() : input.replace('0', '*');
 
     }
 
